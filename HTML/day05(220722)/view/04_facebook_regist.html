@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" id="facebook" class="">
+  <head>
+    <!-- 제목 : 상단 탭에 표시 됨 -->
+    <title id="pageTitle">Facebook - 로그인 또는 가입</title>
+    
+    <!-- 메타 정보 -->
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer"/>
+    <meta property="og:site_name" content="Facebook"/>
+    <meta property="og:url" content="https://ko-kr.facebook.com/"/>
+    <meta property="og:image" content="https://www.facebook.com/images/fb_icon_325x325.png"/>
+    <meta property="og:locale" content="ko_KR"/>
+    <meta name="description" content="Facebook에 로그인하세요. 친구, 가족, 지인들과 함께 하는 즐거운 Facebook 생활이 시작됩니다."/>
+    
+    <!-- 링크 -->
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.facebook.com/"/>
+    <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico"/>
+  </head>
+  <body>
+    <div>
+        <div>
+            <img src="../images/facebook-logo.svg" width="200px"/>
+        </div>
+        <div>
+            <div>
+                <div>새 계정 만들기</div>
+                <div>빠르고 쉽습니다.</div>
+            </div>
+        </div>
+
+        <form action="" method="POST">
+            <div>
+                <div>
+                    <div>성</div>
+                    <input type="text" name="lastname"/>
+                </div>
+                <div>
+                    <div>이름(성은 제외)</div>
+                    <input type="text" name="firstname"/>
+                </div>
+                <div>
+                    <div>휴대폰 번호 또는 이메일</div>
+                    <input type="text" name="reg_email"/>
+                </div>
+                <div>
+                    <div>새 비밀번호</div>
+                    <input type="password" name="reg_password"/>
+                </div>
+                <div>
+                    생일
+                    <a href="#" title="더 자세한 정보를 원하시면 여기를 클릭하세요"></a>
+                    <i class="as fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div>
+                    <select name="birthday_year" title="연도"> 
+                        <option value="2022">2022년</option>
+                        <option value="2021">2021년</option>
+                        <option value="2020">2020년</option>
+                        <option value="2019">2019년</option>
+                        <option value="2018">2018년</option>
+                    </select>
+                    <select name="birthday_month" title="월"> 
+                        <option value="1">1월</option>
+                        <option value="2">2월</option>
+                        <option value="3">3월</option>
+                    </select>
+                    <select name="birthday_day" title="일"> 
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4">4일</option>
+                        <option value="5">5일</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </dic>
+  </body>
+</html>
