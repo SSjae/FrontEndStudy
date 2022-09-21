@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <!-- 
+            엘리먼트 선택자
+            h1 { color: rgb(255, 142, 37); } 
+        -->
+        <h1>안녕하세요</h1>
+
+        <!-- 
+            하위 선택자
+            body p { color: red; }
+         -->
+        <p>프론트 엔드 과정 소개</p>
+
+        <!-- 
+             클래스 선택자
+             .sel-class { font-style: italic; color: rgb(14, 255, 255); }
+         -->
+        <div>
+            <p class="sel-class">6월 개강</p>
+            <p class="sel-class">월수금</p>
+            <h3 class="sel-class">1</h3>
+            <!-- 
+                아이디 선택자
+                #sel-id { color: green; }
+             -->
+             <p id="sel-id">시각 19:00</p>
+        </div>
+
+        <span id="sel-id">홍길동</span>
+
+        <div>
+            <!-- 
+                자식 선택자
+                ul > li { color: blue; }
+             -->
+            <ul>
+                <li>01. HTML</li>
+                <li>02. CSS</li>
+                <li>03. Javascript</li>
+            </ul>
+
+            <ol>
+                <li>04. React.js</li>
+                <li>05. Node.js</li>
+                <li>06. Mysql</li>
+            </ol>
+        </div>
+    </body>
+</html>
+
+<style>
+    * { padding: 0; color: gray; }
+    h1 { color: rgb(255, 142, 32); } 
+    body p { color: red; }
+    .sel-class { font-style: italic; color: rgb(14, 255, 255); }
+    #sel-id { color: green; }
+    ul > li { color: blue; }
+    /* p.sel-class { color: yellow; } */
+</style>
