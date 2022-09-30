@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>자바 스크립트</h1>
+        <h1>JavaScript</h1>
+    </body>
+</html>
+
+<script>
+    // Number 객체를 생성하는 방법
+    let num1 = 1;                       // 숫자 변수
+    let num2 = new Number(3.14159);     // 숫자 객체
+
+    // toExponential() - 숫자를 지수 표시로 나타낸 문자열 리턴(유효 숫자의 자리수)
+    console.log("================> toExponential")
+    console.log(num1.toExponential());  // 1e+0
+
+	// toFixed() - 숫자를 고정 소수점 표시로 나타낸 문자열 리턴(소수점 자릿수)
+    console.log("================> toFixed")
+    console.log(num2.toFixed());        // 3
+
+	// toPrecision() - 숫자를 길이에 따라 지수 or 고정 소수점 표시 문자열 리턴
+    console.log("================> toPrecision")
+    console.log(num2.toPrecision());    // 3.14159
+    console.log((123123123123123123123123).toPrecision()); // 1.2312312312312312e+23
+
+    // MAX_VALUE - 자바스크립트에서 표현 가능한 최대 숫자
+    console.log("================> MAX_VALUE")
+    console.log(Number.MAX_VALUE);      // 1.7976931348623157e+308
+
+	// MIN_VALUE - 자바스크립트에서 표현 가능한 최소 숫자
+    console.log("================> MIN_VALUE")
+    console.log(Number.MIN_VALUE);      // 5e-324
+
+	// NaN - 숫자가 아님을 표시하는 지시어(Not a Number)
+    console.log("================> NaN")
+    console.log(Number.NaN);            // NaN
+
+	// POSITIVE_INFINITY - 양의 무한대 수
+    console.log("================> POSITIVE_INFINITY")
+    console.log(Number.POSITIVE_INFINITY);  // Infinity
+
+	// NEGATIVE_INFINITY - 음의 무한대 수
+    console.log("================> NEGATIVE_INFINITY")
+    console.log(Number.NEGATIVE_INFINITY);  // -Infinity
+</script>
