@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>Array 객체</h2>
+    </body>
+</html>
+<script>
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];    // 10개의 요소를 갖는 배열 객체
+
+    // array 전통적인 for 반복
+    for(let i = 0; i < arr.length; i++) {
+        console.log(i + " 요소의 값은 " + arr[i] + " 입니다.");
+    }
+
+    console.log("======== forEach 화살표");
+    // forEach() 배열을 for 반복하는 메소드(arrow 화살표 표시 방식 함수) ES6
+    // forEach()는 단순히 반복할 때 사용
+    arr.forEach((num, index, arrnums) => {
+        console.log(index + " 요소의 값은 " + num + " 입니다.");
+        // console.log(arrnums);
+    })
+
+    console.log("======== forEach function");
+    arr.forEach(function(num, index, arrnums) {
+        console.log(index + " 요소의 값은 " + num + " 입니다.");
+        // console.log(arrnums);
+    })
+
+    // map() 기존의 배열에 특정 규칙을 적용해서 새로운 배열 생성
+        // 반복으로 원래 있는 배열에다가 추가해서 새로운 배열을 생성
+        // 반복과 값을 변경하고 싶을 때 사용
+    console.log("==============> array.map()");
+    const arr1 = arr.map((num, index) => {
+        return "A" + num;
+    })
+
+    // arr.forEach((num, index, arrnum) => {
+    //     arrnum[index] = "B" + num;
+    // })
+    // 이 방법은 실제 배열이 바뀌기 때문에 이 방법은 잘못된 방법
+    // console.log(arr);
+
+    const arr2 = arr.map((num, index) => {
+        return "B" + num;
+    })
+
+    console.log(arr.toString());   // 1,2,3,4,5,6,7,8,9,10
+    console.log(arr1.toString());  // A1,A2,A3,A4,A5,A6,A7,A8,A9,A10
+    console.log(arr2.toString());  // B1,B2,B3,B4,B5,B6,B7,B8,B9,B10
+
+    // filter() 특정 조건을 만족하는 요소들에 대한 배열을 반환한다
+    console.log("===============> array.filter()");
+    const results = arr.filter((num) => {
+        console.log(num);
+        return num <= 5;
+    })
+    console.log(arr.toString());        // 1,2,3,4,5,6,7,8,9,10
+    console.log(results.toString());    // 1,2,3,4,5
+
+    // find() 특정 조건을 만족하는 요소를 1개만 검색(찾으면 바로 종료)
+    console.log("===============> array.find()");
+    const value = arr.find((num) => {
+        console.log(num);
+        return num === 5;   // filter와 조건이 다르다. 한개 만 찾기 때문에 <= 는 말이 안됨
+    })
+    console.log(value);     // 5
+
+    // findIndex() 특정 조건을 만족하는 요소를 1개만 검색해서 해당 요소의 index 반환(찾으면 바로 종료);
+    console.log("===============> array.findIndex()");
+    const index = arr.findIndex((num) => {
+        console.log(num);
+        return num === 3;   // index를 찾음
+    })
+    console.log(index);     // 2
+
+    // every() 배열의 요소가 조건을 만족하는지 확인(모든 요소가 조건에 만족해야 true)
+    // 모든 요소가 조건에 만족해야 true이고 하나라도 틀리면 거기서 멈추고 false
+    const numbers = [1, 2, 3, 1, 7, 3];
+    console.log("=================> array.every()");
+    const res1 = numbers.every((num) => {
+        console.log(num);
+        return num < 5;
+    })
+    console.log(res1);  // false
+
+    // some() 배열의 요소가 특정 조건을 적어도 하나는 만족하는지 확인(만족시 종료)
+    console.log("=================> array.some()");
+    const res2 = numbers.some((num) => {
+        console.log(num);
+        return num === 3;
+    })
+    console.log(res2);  // true
+</script>
