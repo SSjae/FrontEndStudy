@@ -1,0 +1,41 @@
+프론트엔드 13일차 목차입니다.
+
+1. 플렉시블 아이템
+2. 블로그 화면 구현 1
+3. 블로그 화면 구현 2
+
+끝까지 하라. 내가 살면서 가장 소중한 발견은 바로 인내였다.
+-----------------------------------------------------------------
+플렉시블 아이템(Flex Items) 요소의 소석
+	order			Flex Item의 순서를 설정	
+	flex-grow		Flex Item의 증가 너비 비율을 설정
+	align-self		교차 축(cross-axis)에서 아이템의 정렬 방법을 설정
+	flex			flex-grow, flex-shrink.. 축약형
+	....
+
+order
+	숫자			Items의 순서를 설정(default : 0)
+				제일 작을수록 맨 앞으로 감
+
+flex-grow
+	숫자			Item의 증가 비율을 설정(default : 0)
+				전체 크기부터 계산되고 그 크기에 맞게 비율을 설정
+				column으로 할 때 container의 높이를 지정해줘야 한다.
+				row일 때는 item에 width:auto;가 필요하고
+				column일 때는 item에 height:auto;가 필요하다.
+
+align-self
+	auto			컨테이너의 align-items 속성을 상속받음
+	stretch		컨테이너의 교차 축을 채우기 위해 아이템을 늘림
+	flex-start		아이템을 각 줄의 시작점으로 정렬
+	flex-end		아이템을 각 줄의 끝점으로 정렬
+	center		아이템을 가운데 정렬
+
+
+
+
+
+
+
+
+
