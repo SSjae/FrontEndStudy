@@ -1,0 +1,145 @@
+프론트엔드 31일차 목차입니다.
+
+1. React 개요
+2. Virtual DOM
+3. 리액트 설치
+4. create-react-app
+
+운은 용기를 내는 사람의 편이다.
+--------------------------------------------------------------------------------------------
+리액트(React)
+	React는 웹 브라우저의 UI를 구현하는 라이브러리(프레임워크)로
+	기본적으로 CSS, HTML, JavaScript
+	개발언어를 이용한 컴포넌트 기반 프론트엔드 프레임워크이다.
+
+프레임워크는 내가 개발할 때 환경에 종속되서 개발하는 경우를 말한다.
+라이브러리는 내가 개발하는 언어에 추가로 파일을 연결하여 개발하는 경우를 말한다.
+
+특징
+	선언형 프로그래밍이다.
+	컴포넌트 기반 프로그래밍이다.
+	컴포넌트의 확장성/재사용성이 높다.
+	
+개요
+	2013년 페이스북 소프트웨어 엔지니어 Jordan Walke에 의해 탄생
+	React 컴포넌트 작성을 손 쉽게 하는 XML 구문이 바로 JSX이다. .jsx .js
+	컴포넌트에 속성(Props)을 전달하고 상태(State)를 관리하여 화면을 표현한다.
+	2015년 CS6 class 지원
+	2017년 React v16.0 업데이트
+	2019년 React Hooks 공개
+
+Virtual DOM
+DOM(Document Object Model)
+	DOM은 HTML과 자바스크립트를 이어주는 공간으로,
+	내가 작성한 HTML을 자바스크립트가 이해할 수 있도록 객체(object)로 변환
+	
+React에서 Virtual DOM
+	React에서 Virtual DOM을 사용하는 가장 큰 이유는 성능적으로 빠르다는 것.
+	즉, 다시 말해 성능을 빠르게 하기 위하여 Virtual DOM을 사용했다.
+
+	정확히는 DOM 조작 자체가 성능이 느리거나 문제가 있는 것이 아니라
+	DOM 조작 이후 화면에 그려지기 전까지 의 과정이 느리다는 것이다.
+	이를 해결하는 방법으로 React에서는 Virtual DOM 기술을 사용하였다.
+
+일반적인 과정
+	HTML 파싱 -> DOM 트리 생성 => CSS 스타일 적용 -> Render 트리 생성
+	-> 레이아웃 구성 -> 페이팅 -> 화면에 표시
+
+돔 렌더링(수정, 추가, 삽입, 삭제를 할 때마다 이 작업 실행)
+	--> 많아지면 과부하가 되기 때문에 Virtual DOM이 생김
+	DOM 트리 + Style 생성 => Render Tree => Layout => Painting => 화면표시
+
+위의 일련의 과정에서 Virtual DOM 에서 미리 해당 과정을 진행한다.
+	자원이 많이 사용되기 때문에 Virtual DOM에서 미리 진행을 해 더 쉽게 하게 함
+	DOM 트리 생성 -> CSS 스타일 적용 -> Render 트리 생성 -> 레이아웃 구성
+
+	VD에서 위 과정만 실행하다가 업데이트를 하면 바로 화면에 표시 되도록 함
+	VD에서는 많은 과정들을 하지만 어느 순간에 실제 렌더링은 한번만 일어난다.
+	그래서 더 빠르고 과부하도 적다.
+
+설치 사전 준비
+	node.js 설치 및 버전 확인 : node -v(현재 기준 16.x.x 버전 이상 사용 권장)
+	node 다운로드 : https://nodejs.org/ko/
+		  win	  : node-v16.xxxx.msi
+
+	npm -v	패키지 관리		npm install -g create-react-app
+
+추천 방법
+	npm install npx -g
+	npx -v 확장된 패키지 관리 npx install -g create-react-app {my app name}
+					  npx create-react-app ./(현재 폴더에)
+
+Window OS에서 bash 쉘 사용하기 위한 설치
+	https://git-scm.com/		bash(Git-2.37.0-64-bit.exe) 다운로드 및 설치
+
+리액트 블로그 : https://www.daleseo.com/create-react-app/
+
+리액트 공식 홈페이지
+	create-react-app.dev
+	ko.reactjs.org/docd/create-a-new-react-app.html
+
+설치순서
+	1. 리액트를 설치할 폴더로 이동
+	2. 리액트 설치 시작
+	3. 리액트 실행
+	4. 불필요한 파일 삭제
+	5. App.js 내용 삭제
+	6. 실행 확인	
+
+01. cmd에서 리액트를 설치할 폴더로 이동
+		cd d:...   c:...
+
+02. 리액트 설치 시작
+	npm install npx -g
+
+	npm, npx 버전 확인
+		npm -v
+		npx -v
+
+	npx create-react-app {my project name}
+
+	Need to install the following packages:
+	 create-react-app
+	Ok to proceed? (y) y
+
+	npx create-react-app ./(현재 폴더에)
+
+03. 리액트 실행
+	npm run start
+
+	아래와 같이 출력되면서 브라우저 켜짐
+	Complied successfully!
+	....
+
+04. 불필요한 파일 삭제
+	logo192.png
+	logo512.png
+	App.test.js
+	log.svg
+	reportWebVitals.js
+	serviceWorker.js
+	setupTests.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
