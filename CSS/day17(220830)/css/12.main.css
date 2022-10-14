@@ -1,0 +1,23 @@
+@media (max-width: 800px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    
+    header .head-logo > input {
+        display: none;
+    }
+
+    header .head-nav {
+        display: none;
+    }
+
+    header .head-side {
+        right: 10px;
+    }
+}
