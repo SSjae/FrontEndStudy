@@ -1,0 +1,105 @@
+프론트엔드 47일차 목차입니다. 
+
+React Facebook 프로젝트 1
+1. 프론트엔드 설치 및 세팅
+2. 백엔드 설치 및 세팅
+3. 프론트엔드 및 백엔드 확인
+4. 로그인
+
+눈이 감기는 가? 그건 미래를 향한 눈도 감긴다.
+------------------------------------------------------------------
+
+페이스북 프로젝트 구성
+
+workspace 하위에 facebook 폴더를 생성
+
+하위에 두개의 폴더를 더 생성한다.
+	1. facebook/frontend
+	2. facebook/backend
+
+frontend 폴더에서 react 프론트엔드 설치
+
+프론트엔드 설치
+	01. 리액트를 설치할 폴더로 이동
+   	02. 리액트 설치 시작
+  	03. 리액트 실행
+   	04. 불필요한 파일 삭제
+   	05. App.js 내용 삭제
+   	06. 실행 확인
+
+   	01. 리액트를 설치할 폴더로 이동
+      	cd d:/workspace/facebook/frontend
+
+   	02. 리액트 설치 시작
+   		npx create-react-app ./
+
+   	03. 불필요한 파일 삭제
+      	logo192.png
+      	logo512.png
+      	App.test.js
+      	logo.svg
+      	reportWebVitals.js
+      	seviceWorker.js
+      	setupTests.js
+
+   	04. App.js, index.js, manifest.json, index.html 내용 삭제
+
+   		App.js 파일 
+      		1 / 7~21 번 줄 삭제 및 Hello World! 추가
+      	index.js 파일 
+      		5 / 13~17 번 줄 삭제
+		...
+
+   	05. 실행 확인
+      	npm run start
+
+	06. 패키지 설치	
+		npm i react-router-dom		리액트 라우터
+		npm i node-sass			SASS
+		npm i axios				Axios
+		npm i moment			날짜 시간 moment
+
+	07. package.json에 scripts에 start를 client로 변경
+		npm run client로 실행
+
+Backend 폴더에서 Backend 설정
+
+백엔드
+	01. npm init 설정
+
+	02. express 설치
+		npm install express
+
+	03. server.js 작성
+		const express = require("express");
+		const path = require("path");
+		const app = express();
+
+		// 메인 페이지 접속시 html 응답하는 방법
+
+		// 미들웨어 : html, css, js, img 파일들이 담긴 곳 명시
+		app.use(express.static(path.join(__dirname, "public")))
+
+		app.get("/", (req, res) => {
+    			res.sendFile(path.join(__dirname, 'public/index.html'))
+		})
+
+		const http = require("http").createServer(app);
+		http.listen(8080, () => {
+    			console.log("server listen start : 8080")
+		})
+
+	04. nodemon 설치
+		npm install -g nodemon
+
+ 	05. package.json에 scripts에 server로 추가해준다.
+		"server": "nodemon --watch ./ server.js"
+
+		그러면 npm run server로 실행 가능
+
+	06. backend용 moment 설치
+		npm i moment
+
+	07. body에서 데이터를 관리하기 위한 모듈 설치
+		npm i body-parser
+
